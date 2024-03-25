@@ -14,7 +14,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/pinecone.svg" />
       </Head>
-      <main></main>
+      <main>
+        <box>
+          <slack>dsfgsd</slack>
+        </box>
+      </main>
     </>
   );
 }
