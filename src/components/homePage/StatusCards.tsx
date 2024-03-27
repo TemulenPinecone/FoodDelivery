@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { Book } from "../icons";
 import statusCardsData from "@/utils/statusCardsData.json";
 
@@ -9,21 +9,23 @@ export const StatusCards = () => {
     <Stack flexDirection={"row"}>
       {CardsData.cards.map((a) => {
         return (
-          <Box border={1} borderRadius={4} width={"100%"}>
-            <Box>
-              <Book />
+          <IconButton>
+            <Box border={1} borderRadius={4} width={"100%"}>
+              <Box>
+                <Book />
+              </Box>
+              <Box>
+                <Typography fontSize={18} fontWeight={700}>
+                  {a.text1}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography fontSize={14} fontWeight={400}>
+                  {a.text2}
+                </Typography>
+              </Box>
             </Box>
-            <Box>
-              <Typography fontSize={18} fontWeight={700}>
-                {a.text1}
-              </Typography>
-            </Box>
-            <Box>
-              <Typography fontSize={14} fontWeight={400}>
-                {a.text2}
-              </Typography>
-            </Box>
-          </Box>
+          </IconButton>
         );
       })}
     </Stack>
