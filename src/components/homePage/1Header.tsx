@@ -7,13 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Pinecone, SignIn, Wishlist } from "../icons";
 import { Button } from "@mui/material";
@@ -27,6 +21,7 @@ const Search = styled("div")(({ theme }) => ({
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
+  color: "black",
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: "100%",
@@ -65,9 +60,6 @@ export const Header = () => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
 
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -93,7 +85,7 @@ export const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Toolbar>
           <Box>
             <Pinecone />
@@ -103,7 +95,7 @@ export const Header = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block" }}
               >
                 {page}
               </Button>
@@ -111,15 +103,16 @@ export const Header = () => {
           </Box>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon sx={{ color: "black" }} />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Хайх"
               inputProps={{ "aria-label": "search" }}
+              sx={{ borderColor: "black" }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, color: "black" }}>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
@@ -136,7 +129,7 @@ export const Header = () => {
               color="inherit"
             >
               <SignIn />
-              <Typography>Сагс</Typography>
+              <Typography>Нэвтрэх</Typography>
             </IconButton>
           </Box>
         </Toolbar>

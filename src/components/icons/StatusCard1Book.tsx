@@ -1,4 +1,4 @@
-export const Book = () => {
+export const StatusCard1Book = () => {
   return (
     <svg
       width="29"

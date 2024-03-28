@@ -1,7 +1,12 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Header, Highlight, StatusCards } from "@/components/homePage";
+import {
+  Header,
+  Highlight,
+  SaleMenu,
+  StatusCards,
+} from "@/components/homePage";
 import { Box, Stack } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,6 +30,9 @@ export default function Home() {
           </Box>
           <Box>
             <StatusCards />
+          </Box>
+          <Box>
+            <SaleMenu />
           </Box>
         </Stack>
       </main>
