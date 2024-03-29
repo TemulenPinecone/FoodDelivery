@@ -14,7 +14,7 @@ export const SaleMenu = () => {
           <Typography alignContent={`center`}>Хямдралтай</Typography>
         </Stack>
         <Stack>
-          <Button color="info">
+          <Button sx={{ color: "#18BA51", textTransform: "none" }}>
             Бүгдийг харах <ArrowForwardIosIcon fontSize="small" />
           </Button>
         </Stack>
@@ -25,14 +25,14 @@ export const SaleMenu = () => {
         {MenuFood.map((a) => {
           return (
             <Stack>
-              <Box>
+              <Stack>
                 <img
                   src={a.imagePath}
                   alt=""
                   height={`252px`}
                   width={`282px`}
                 />
-              </Box>
+              </Stack>
             </Stack>
           );
         })}
