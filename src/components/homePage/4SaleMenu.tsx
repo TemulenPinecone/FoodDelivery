@@ -1,4 +1,13 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { MenuTitleIcon } from "../icons";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import dummyMenuFood from "@/utils/dummyMenuFood.json";
@@ -11,7 +20,9 @@ export const SaleMenu = () => {
       <Stack flexDirection={`row`} justifyContent={`space-between`}>
         <Stack flexDirection={`row`} alignItems={`center`}>
           <MenuTitleIcon />
-          <Typography alignContent={`center`}>Хямдралтай</Typography>
+          <Typography alignContent={`center`} variant="h5">
+            Хямдралтай
+          </Typography>
         </Stack>
         <Stack>
           <Button sx={{ color: "#18BA51", textTransform: "none" }}>
@@ -21,19 +32,32 @@ export const SaleMenu = () => {
       </Stack>
 
       {/* CARDS */}
-      <Stack>
+      <Stack flexDirection={`row`} gap={4} justifyContent={`center`}>
         {MenuFood.map((a) => {
           return (
-            <Stack>
-              <Stack>
-                <img
-                  src={a.imagePath}
-                  alt=""
-                  height={`252px`}
-                  width={`282px`}
-                />
-              </Stack>
-            </Stack>
+            <Card sx={{ width: 345 }}>
+              <CardActionArea>
+                <CardMedia component="img" height="200" image={a.imagePath} />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    fontWeight={"bold"}
+                    component="div"
+                  >
+                    {a.foodName}
+                  </Typography>
+                  <Stack flexDirection={`row`} gap={2}>
+                    <Typography variant="h6" color="#18BA51">
+                      {a.price}
+                    </Typography>
+                    <Typography variant="h6" color="#272727">
+                      {a.sale}
+                    </Typography>
+                  </Stack>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           );
         })}
       </Stack>
