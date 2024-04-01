@@ -11,7 +11,7 @@ const CardsData = statusCardsData;
 
 export const StatusCards = () => {
   return (
-    <Stack flexDirection={"row"}>
+    <Stack flexDirection={"row"} paddingY={5} paddingTop={10}>
       {CardsData.cards.map((a) => {
         return (
           <IconButton>

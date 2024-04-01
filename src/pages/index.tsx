@@ -2,8 +2,12 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {
+  Dessert,
+  Footer,
   Header,
   Highlight,
+  MainMenu,
+  SaladSnack,
   SaleMenu,
   StatusCards,
 } from "@/components/homePage";
@@ -33,6 +37,18 @@ export default function Home() {
           </Box>
           <Box>
             <SaleMenu />
+          </Box>
+          <Box>
+            <MainMenu />
+          </Box>
+          <Box>
+            <SaladSnack />
+          </Box>
+          <Box>
+            <Dessert />
+          </Box>
+          <Box>
+            <Footer />
           </Box>
         </Stack>
       </main>

@@ -12,7 +12,7 @@ import { MenuTitleIcon } from "../icons";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import dummyMenuFood from "@/utils/dummyMenuFood.json";
 
-export const SaleMenu = () => {
+export const Dessert = () => {
   const MenuFood = dummyMenuFood;
   return (
     <Stack paddingY={5}>
@@ -25,7 +25,7 @@ export const SaleMenu = () => {
         <Stack flexDirection={`row`} alignItems={`center`}>
           <MenuTitleIcon />
           <Typography alignContent={`center`} variant="h5">
-            Хямдралтай
+            Амттан
           </Typography>
         </Stack>
         <Stack>
@@ -54,9 +54,6 @@ export const SaleMenu = () => {
                   <Stack flexDirection={`row`} gap={2}>
                     <Typography variant="h6" color="#18BA51">
                       {a.price}
-                    </Typography>
-                    <Typography variant="h6" color="#272727">
-                      {a.sale}
                     </Typography>
                   </Stack>
                 </CardContent>

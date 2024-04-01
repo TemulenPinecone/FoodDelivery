@@ -9,7 +9,7 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { Pinecone, SignIn, Wishlist } from "../icons";
+import { PineconeBlack, SignIn, Wishlist } from "../icons";
 import { Button } from "@mui/material";
 
 const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
@@ -88,7 +88,7 @@ export const Header = () => {
       <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Toolbar>
           <Box>
-            <Pinecone />
+            <PineconeBlack />
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
