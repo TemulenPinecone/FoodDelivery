@@ -29,22 +29,49 @@ export const Footer = () => {
         </Stack>
       </Stack>
       <Stack flexDirection={"row"} gap={4} paddingTop={3}>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{
+            color: "white",
+            ":hover": { textDecoration: `none` },
+          }}
+        >
           Нүүр
         </Link>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{ color: "white", ":hover": { textDecoration: `none` } }}
+        >
           Холбоо барих
         </Link>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{ color: "white", ":hover": { textDecoration: `none` } }}
+        >
           Хоолны цэс
         </Link>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{ color: "white", ":hover": { textDecoration: `none` } }}
+        >
           Үйлчилгээний нөхцөл
         </Link>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{ color: "white", ":hover": { textDecoration: `none` } }}
+        >
           Хүргэлтийн бүс
         </Link>
-        <Link href="#" color="inherit" sx={{ color: "white" }}>
+        <Link
+          href="#"
+          color="inherit"
+          sx={{ color: "white", ":hover": { textDecoration: `none` } }}
+        >
           Нууцлалын бодлого
         </Link>
       </Stack>
