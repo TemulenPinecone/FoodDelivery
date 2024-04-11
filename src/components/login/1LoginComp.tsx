@@ -33,18 +33,30 @@ export const LoginComp = () => {
       </Typography>
 
       <Stack pt={`30px`}>
+        <InputLabel
+          shrink
+          htmlFor="bootstrap-input"
+          sx={{ color: `black`, ml: 0 }}
+        >
+          Имэйл
+        </InputLabel>
         <TextField
-          label="Имэйл"
           placeholder="Имэйл хаягаа оруулна уу"
           id="filled-size-normal"
         >
-          <InputLabel htmlFor="input-with-icon-adornment">Имэйл</InputLabel>
+          {/* <InputLabel htmlFor="input-with-icon-adornment">Имэйл</InputLabel> */}
         </TextField>
       </Stack>
 
       <Stack pt={`30px`}>
         <FormControl variant="outlined">
-          <InputLabel>Нууц үг</InputLabel>
+          <InputLabel
+            shrink
+            htmlFor="bootstrap-input"
+            sx={{ color: `black`, ml: 0 }}
+          >
+            Нууц үг
+          </InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
             type={showPassword ? `text` : `password`}
@@ -61,7 +73,6 @@ export const LoginComp = () => {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
           ></OutlinedInput>
         </FormControl>
       </Stack>

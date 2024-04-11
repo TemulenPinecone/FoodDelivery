@@ -121,7 +121,7 @@ export const SignUpComp = () => {
           </FormControl>
         </Box>
 
-        <FormControl variant="standard" fullWidth>
+        <FormControl variant="standard" fullWidth sx={{ mt: 2 }}>
           <InputLabel
             shrink
             htmlFor="bootstrap-input"
@@ -135,16 +135,15 @@ export const SignUpComp = () => {
             fullWidth
             type={showPassword ? `text` : `password`}
           />
-          {/* <InputAdornment position="end">
-            <IconButton
-              aria-label="toggle password visibility"
-              onClick={handleClickShowPassword}
-              onMouseDown={handleMouseDownPassword}
-              edge="end"
-            >
-              {showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-          </InputAdornment> */}
+          {/* <InputAdornment> */}
+          <IconButton
+            aria-label="toggle password visibility"
+            onClick={handleClickShowPassword}
+            onMouseDown={handleMouseDownPassword}
+          >
+            {showPassword ? <VisibilityOff /> : <Visibility />}
+          </IconButton>
+          {/* </InputAdornment> */}
         </FormControl>
 
         <Stack pt={`30px`}>
